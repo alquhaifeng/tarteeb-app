@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ترتيب - Tarteeb | دفتر حساباتك الذكي</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700;900&family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: '#0A192F',
+                        gold: '#D4AF37',
+                        offwhite: '#F8F9FA',
+                    },
+                    fontFamily: {
+                        cairo: ['Cairo', 'sans-serif'],
+                        inter: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body { font-family: 'Cairo', sans-serif; background-color: #F8F9FA; scroll-behavior: smooth; }
+        .glass { background: rgba(255, 255, 255, 0.05); backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .hero-gradient { background: linear-gradient(135deg, #0A192F 0%, #112240 100%); }
+        .btn-gold { background-color: #D4AF37; color: #0A192F; transition: all 0.3s ease; }
+        .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 10px 20px rgba(212, 175, 55, 0.3); }
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <nav class="fixed w-full z-50 glass py-4">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-white rounded-xl flex items-center justify-center shadow-lg">
+                    <i class="fas fa-wallet text-navy text-xl"></i>
+                </div>
+                <span class="text-white text-2xl font-bold tracking-wider font-inter">TARTEEB</span>
+            </div>
+            <div class="hidden md:flex gap-8 text-white/80 font-bold">
+                <a href="#features" class="hover:text-gold transition">المميزات</a>
+                <a href="#security" class="hover:text-gold transition">الأمان</a>
+                <a href="#reports" class="hover:text-gold transition">التقارير</a>
+            </div>
+            <button class="btn-gold px-6 py-2 rounded-full font-bold text-sm">تحميل الآن</button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center">
+            <div data-aos="fade-left">
+                <h1 class="text-white text-5xl md:text-7xl font-black leading-tight mb-6">
+                    دفتر حساباتك <span class="text-gold">الذكي</span>
+                </h1>
+                <p class="text-white/70 text-lg mb-10 leading-relaxed max-w-lg">
+                    المنظومة المالية الأكثر تطوراً لإدارة الديون والحسابات. دقة محاسبية، أمان بيومتري، ومزامنة سحابية فورية في تطبيق واحد فاخر.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="#" class="flex items-center gap-3 bg-navy border border-white/20 px-8 py-3 rounded-2xl text-white hover:bg-white/10 transition">
+                        <i class="fab fa-google-play text-2xl text-gold"></i>
+                        <div class="text-right">
+                            <p class="text-[10px] opacity-60">متوفر على</p>
+                            <p class="text-sm font-bold">Google Play</p>
+                        </div>
+                    </a>
+                    <a href="#" class="flex items-center gap-3 bg-navy border border-white/20 px-8 py-3 rounded-2xl text-white hover:bg-white/10 transition">
+                        <i class="fab fa-apple text-2xl"></i>
+                        <div class="text-right">
+                            <p class="text-[10px] opacity-60">قريباً على</p>
+                            <p class="text-sm font-bold">App Store</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="relative justify-self-center" data-aos="zoom-in">
+                <!-- ========================================== -->
+                <!-- تم استبدال الموك اب القديم بإطار الهاتف المحدث الذي طلبته -->
+                <!-- ========================================== -->
+                <div class="w-64 h-[500px] bg-navy rounded-[3rem] border-[8px] border-white/10 shadow-2xl relative overflow-hidden">
+                    <!-- واجهة التطبيق الداخلية (Simulated App UI) -->
+                    <div class="w-full h-full bg-navy p-4 flex flex-col pt-10">
+                        <!-- Header الداخلي -->
+                        <div class="flex justify-between items-center mb-6">
+                            <div class="w-8 h-8 rounded-full bg-gold/20 flex items-center justify-center border border-gold/30">
+                                <i class="fas fa-user text-gold text-[10px]"></i>
+                            </div>
+                            <i class="fas fa-bell text-white/40 text-xs"></i>
+                        </div>
+                        
+                        <!-- بطاقة الرصيد داخل الهاتف -->
+                        <div class="bg-gradient-to-br from-gold/20 to-navy border border-gold/30 p-4 rounded-2xl mb-6 shadow-xl">
+                            <p class="text-white/50 text-[10px] mb-1">إجمالي الرصيد</p>
+                            <h4 class="text-white text-xl font-bold font-inter">$24,500.50</h4>
+                            <div class="mt-4 flex gap-2">
+                                <div class="h-1 w-full bg-gold/20 rounded-full overflow-hidden">
+                                    <div class="w-2/3 h-full bg-gold"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- قائمة العمليات داخل الهاتف -->
+                        <p class="text-white/40 text-[9px] mb-3 uppercase tracking-widest">العمليات الأخيرة</p>
+                        <div class="space-y-3">
+                            <!-- عملية 1 -->
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded-xl border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-7 h-7 bg-green-500/20 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-arrow-down text-green-500 text-[8px]"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-white text-[10px] font-bold">متجر الترتيب</p>
+                                        <p class="text-white/30 text-[8px]">منذ ساعتين</p>
+                                    </div>
+                                </div>
+                                <p class="text-green-400 text-[10px] font-bold">+$450</p>
+                            </div>
+                            <!-- عملية 2 -->
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded-xl border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-7 h-7 bg-red-500/20 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-arrow-up text-red-500 text-[8px]"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-white text-[10px] font-bold">شركة النقل</p>
+                                        <p class="text-white/30 text-[8px]">أمس</p>
+                                    </div>
+                                </div>
+                                <p class="text-red-400 text-[10px] font-bold">-$120</p>
+                            </div>
+                            <!-- عملية 3 -->
+                            <div class="flex justify-between items-center bg-white/5 p-2 rounded-xl border border-white/5">
+                                <div class="flex items-center gap-2">
+                                    <div class="w-7 h-7 bg-gold/20 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-exchange-alt text-gold text-[8px]"></i>
+                                    </div>
+                                    <div>
+                                        <p class="text-white text-[10px] font-bold">تحويل عملة</p>
+                                        <p class="text-white/30 text-[8px]">24 يونيو</p>
+                                    </div>
+                                </div>
+                                <p class="text-white text-[10px] font-bold">YER</p>
+                            </div>
+                        </div>
+
+                        <!-- Bottom Nav داخل الهاتف -->
+                        <div class="mt-auto flex justify-around items-center border-t border-white/10 pt-3">
+                            <i class="fas fa-home text-gold text-xs"></i>
+                            <i class="fas fa-chart-pie text-white/20 text-xs"></i>
+                            <div class="w-8 h-8 bg-gold rounded-full flex items-center justify-center shadow-lg shadow-gold/20">
+                                <i class="fas fa-plus text-navy text-xs"></i>
+                            </div>
+                            <i class="fas fa-wallet text-white/20 text-xs"></i>
+                            <i class="fas fa-cog text-white/20 text-xs"></i>
+                        </div>
+                    </div>
+
+                    <!-- كاميرا الهاتف (الكبسولة السوداء) -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-6 bg-[#050c18] rounded-full"></div>
+                </div>
+                <!-- ========================================== -->
+                <!-- نهاية إطار الهاتف المحدث -->
+                <!-- ========================================== -->
+                
+                <!-- Floating Card (لا يزال محتفظاً به لإضافة الحيوية) -->
+                <div class="absolute -bottom-6 -right-12 glass p-6 rounded-2xl shadow-2xl animate-bounce" style="animation-duration: 3s;">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 bg-green-500/20 rounded-full flex items-center justify-center">
+                            <i class="fas fa-check text-green-500"></i>
+                        </div>
+                        <div>
+                            <p class="text-white text-xs opacity-60">تم الاستلام</p>
+                            <p class="text-white font-bold font-inter">+ $1,250.00</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Grid -->
+    <section id="features" class="py-24 bg-white">
+        <div class="container mx-auto px-6 text-center mb-16">
+            <h2 class="text-navy text-3xl md:text-4xl font-black mb-4">بساطة في الاستخدام، قوة في الأداء</h2>
+            <div class="w-20 h-1.5 bg-gold mx-auto rounded-full"></div>
+        </div>
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div class="p-8 rounded-3xl bg-offwhite border border-gray-100 hover:border-gold/30 transition group" data-aos="fade-up">
+                <div class="w-14 h-14 bg-navy rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-coins text-gold text-2xl"></i>
+                </div>
+                <h3 class="text-navy text-xl font-black mb-4">تعدد العملات</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">فصل كامل بين أرصدة الريال والدولار والسعودي مع نظام صرف آلي دقيق.</p>
+            </div>
+            <!-- Card 2 -->
+            <div class="p-8 rounded-3xl bg-offwhite border border-gray-100 hover:border-gold/30 transition group" data-aos="fade-up" data-aos-delay="100">
+                <div class="w-14 h-14 bg-navy rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-fingerprint text-gold text-2xl"></i>
+                </div>
+                <h3 class="text-navy text-xl font-black mb-4">أمان بيومتري</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">حماية بياناتك المالية عبر البصمة أو الوجه لضمان الخصوصية المطلقة.</p>
+            </div>
+            <!-- Card 3 -->
+            <div class="p-8 rounded-3xl bg-offwhite border border-gray-100 hover:border-gold/30 transition group" data-aos="fade-up" data-aos-delay="200">
+                <div class="w-14 h-14 bg-navy rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition">
+                    <i class="fas fa-file-pdf text-gold text-2xl"></i>
+                </div>
+                <h3 class="text-navy text-xl font-black mb-4">تقارير احترافية</h3>
+                <p class="text-gray-500 text-sm leading-relaxed">توليد كشوفات حساب وسندات PDF بلمسة واحدة تحمل شعار نشاطك التجاري.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-navy pt-20 pb-10">
+        <div class="container mx-auto px-6 grid md:grid-cols-3 gap-12 mb-16">
+            <div class="col-span-1">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-8 h-8 bg-gold rounded-lg flex items-center justify-center">
+                        <i class="fas fa-wallet text-navy text-sm"></i>
+                    </div>
+                    <span class="text-white text-xl font-bold font-inter tracking-widest">TARTEEB</span>
+                </div>
+                <p class="text-white/50 text-sm leading-relaxed">
+                    نحن نغير الطريقة التي تدير بها أموالك، لنجعلها أكثر دقة، أماناً، وتنظيماً.
+                </p>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">روابط سريعة</h4>
+                <ul class="text-white/60 space-y-3 text-sm">
+                    <li><a href="#" class="hover:text-gold">سياسة الخصوصية</a></li>
+                    <li><a href="#" class="hover:text-gold">شروط الاستخدام</a></li>
+                    <li><a href="#" class="hover:text-gold">الدعم الفني</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="text-white font-bold mb-6">تابعنا</h4>
+                <div class="flex gap-4">
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-gold hover:text-navy transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-gold hover:text-navy transition"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full glass flex items-center justify-center text-white hover:bg-gold hover:text-navy transition"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-10 text-center">
+            <p class="text-white/30 text-xs font-inter uppercase tracking-widest">
+                &copy; 2026 TARTEEB SMART LEDGER. ALL RIGHTS RESERVED.
+            </p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1000, once: true });
+    </script>
+</body>
+</html>
